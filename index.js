@@ -1,6 +1,6 @@
 (function(){
-	// 数组去重
-	function noRepate(arr) {
+	// 数组排序
+	function inSort(arr) {
 		var len = arr.length;
 		for(var i = 0; i < len; i++) {
 			for(var j = 0; j < len - 1 - i; j++) {
@@ -14,10 +14,10 @@
 		return arr
 	}
 	var arr = [1,3,4,6,7,9,8,5,2];
-	document.write(" -- " + noRepate(arr));
+	document.write(" -- " + inSort(arr));
 
-	// 数组排序
-	function sort(arr) {
+	// 数组去重
+	function noRepeat(arr) {
 		var array = [],
 			len = arr.length;
 		for(var i = 0; i < len; i++) {
@@ -28,7 +28,7 @@
 		return array;
 	}
 	var array = [1,1,2,2,3,3,4,4,5,5];
-	document.write(" -- " + sort(array))
+	document.write(" -- " + noRepeat(array))
 
 	// 查找数组中是否有特定的值 inArray
 	var arrayNeedle = ["red", "blue", "yellow"]
