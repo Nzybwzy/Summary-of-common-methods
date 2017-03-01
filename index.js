@@ -73,5 +73,14 @@
 	for(var i = 0; i < 10; i++) {
 		iArray.push(getRandom(12, 20))
 	}
-	document.write(" 10-20 随机数和排序 " + iArray.sort() + "<br/>")
+	document.write(" 10-20 随机数和排序 " + iArray.sort() + "<br/>");
+
+	// 闭包
+	for(var i = 0; i < 10; i++) {
+		(function(j) {
+			setTimeout(function timer() {
+				console.log(" 闭包 " + j)
+			}, j * 1000)
+		})(i)
+	}
 }.call(this))
