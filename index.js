@@ -14,7 +14,7 @@
 		return arr
 	}
 	var arr = [1,3,4,6,7,9,8,5,2];
-	document.write(" -- " + inSort(arr));
+	document.write("<br/>" + arr + " 数组排序 " + inSort(arr) + "<br/>");
 
 	// 数组去重
 	function noRepeat(arr) {
@@ -28,7 +28,7 @@
 		return array;
 	}
 	var array = [1,1,2,2,3,3,4,4,5,5];
-	document.write(" -- " + noRepeat(array))
+	document.write(array + " 数组去重 " + noRepeat(array) + "<br/>")
 
 	// 查找数组中是否有特定的值 inArray
 	var arrayNeedle = ["red", "blue", "yellow"]
@@ -40,8 +40,8 @@
 		}
 		return false
 	}
-	document.write(" -- " + arrayNeedle.inArray("red"));
-	document.write(" -- " + arrayNeedle.inArray("hello"));
+	document.write(arrayNeedle + " 数组中有没有red " + arrayNeedle.inArray("red") + "<br/>");
+	document.write(arrayNeedle + " 数组中有没有hello " + arrayNeedle.inArray("") + "<br/>");
 
 	// 字符串反转
 	String.prototype.reverse = function() {
@@ -50,7 +50,7 @@
 					apply(this.split("")).join("")
 	}
 	var str = "abcdrfg";
-	document.write(" -- " + str.reverse());
+	document.write(str + " 字符串反转 " + str.reverse() + "<br/>");
 
 	// 将字符串转换为驼峰表示法
 	var strings = "a-ss-ddd-ffff-ggggg";
@@ -62,5 +62,16 @@
 		}
 		return massage = arr.join("");
 	}
-	document.write(" -- " + hump(strings));
+	document.write(strings + " 串转换为驼峰 " + hump(strings) + "<br/>");
+
+	// 实现 start - end 之间的随机数
+	var iArray = [];
+	function getRandom(istart, iend) {
+		var iChoice = iend - istart + 1;
+		return istart + Math.floor(Math.random() * iChoice)
+	}
+	for(var i = 0; i < 10; i++) {
+		iArray.push(getRandom(12, 20))
+	}
+	document.write(" 10-20 随机数和排序 " + iArray.sort() + "<br/>")
 }.call(this))
