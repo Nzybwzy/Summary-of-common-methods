@@ -51,4 +51,16 @@
 	}
 	var str = "abcdrfg";
 	document.write(" -- " + str.reverse());
+
+	// 将字符串转换为驼峰表示法
+	var strings = "a-ss-ddd-ffff-ggggg";
+	function hump(msg) {
+		var arr = msg.split("-"),
+		massage = "";
+		for(var i = 1; i < arr.length; i++) {
+			arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length);
+		}
+		return massage = arr.join("");
+	}
+	document.write(" -- " + hump(strings));
 }.call(this))
