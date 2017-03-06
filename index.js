@@ -58,7 +58,7 @@
 		var arr = msg.split("-"),
 		massage = "";
 		for(var i = 1; i < arr.length; i++) {
-			arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length);
+			arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length - 1);
 		}
 		return massage = arr.join("");
 	}
@@ -83,4 +83,13 @@
 			}, j * 1000)
 		})(i)
 	}
+	// 重复输出给定字符串
+	function repeatOutputString(str, times) {
+		var strarr = [];
+		while(times--) {
+			strarr.push(str);
+		}
+		return strarr.join("");
+		}
+	document.write(" 重复输出三次abc " + repeatOutputString("abc", 3) + "<br/>");
 }.call(this))
